@@ -14,9 +14,15 @@ public class Conta {
     public void criaAgCc(){
         //System.out.println(Math.floor(Math.random()*1000));
         Random agencia = new Random();
-        Random conta = new Random();
+        Random contacorrente = new Random();
+        Random contapoupanca = new Random();
 
-        System.out.println("Seu número de Agência é: "+agencia.nextInt(9999+1) + "\nSua Conta Corrente é:    "+ conta.nextInt(99999+1));
+        if(contacorrente != contapoupanca) {
+            System.out.println("Seu número de Agência é: " + agencia.nextInt(9999 + 1) +
+                    "\nSua Conta Corrente é:    " + contacorrente.nextInt(99999 + 1) +
+                    "\nSua Conta Poupança é:    " + contapoupanca.nextInt(999999 + 1));
+        }
+
 
     }
 }
