@@ -1,6 +1,6 @@
 package tech;
 
-public class Pessoa {
+public class Conta {
 
     public String nome;
     public long int cpf;
