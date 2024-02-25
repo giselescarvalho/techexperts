@@ -5,8 +5,11 @@ import java.util.Random;
 public class Conta {
 
 
-    private int senha;
+ //   private int senha;
     private double saldoconta;
+    int numeroAgencia, numeroContaCorrente, numeroContaPoupanca;
+
+    Pessoa titular = new Pessoa();
 
 
     public void criaAgCc(){
@@ -16,15 +19,23 @@ public class Conta {
         Random contapoupanca = new Random();
 
         if(contacorrente != contapoupanca) {
-            System.out.println("Seu número de Agência é: " + agencia.nextInt(9999 + 1) +
-                    "\nSua Conta Corrente é:    " + contacorrente.nextInt(99999 + 1) +
-                    "\nSua Conta Poupança é:    " + contapoupanca.nextInt(999999 + 1));
+
+            this.numeroAgencia  = agencia.nextInt(9999 + 1) ;
+            this.numeroContaCorrente = contacorrente.nextInt(99999 + 1);
+            this.numeroContaPoupanca = contapoupanca.nextInt(999999 + 1);
+//
+
+            System.out.println("Seu número de Agência é: " +  numeroAgencia+
+                    "\nSua Conta Corrente é:    " + numeroContaCorrente +
+                    "\nSua Conta Poupança é:    " + numeroContaPoupanca);
+
         }
     }
 //metodos construtores
-    public Conta(int senha){
+   /* public Conta(int senha){
         this.senha = senha;
     }
+    */
 
 //comportamentos
 
@@ -46,13 +57,13 @@ public class Conta {
     /**/
     /**/
 
-    private int getSenha(){
-        return senha;
-    }
-
-    public void setSenha(int senhacli){
-        this.senha = senha;
-    }
+//    private int getSenha(){
+//        return senha;
+//    }
+//
+//    public void setSenha(int senhacli){
+//        this.senha = senha;
+//    }
 
     public double getSaldoconta() {
         return saldoconta;
@@ -62,4 +73,14 @@ public class Conta {
         this.saldoconta = saldoconta;
     }
 
+    public void setTitular(Pessoa titular) {
+        this.titular = titular;
+    }
+
+
+
+//
+//    public Pessoa getTitular() {
+//        return titular;
+    }
 }
