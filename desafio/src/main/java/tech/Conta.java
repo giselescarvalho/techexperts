@@ -12,26 +12,41 @@ public class Conta {
     Pessoa titular = new Pessoa();
 
 
-    public void criaAgCc(){
+    public void setNumeroAgencia(){
         //System.out.println(Math.floor(Math.random()*1000));
         Random agencia = new Random();
+
+        this.numeroAgencia  = agencia.nextInt(9999 + 1) ;
+         System.out.println("Seu número de Agência é: " +  numeroAgencia ;
+//                 +
+//                    "\nSua Conta Corrente é:    " + numeroContaCorrente +
+//                    "\nSua Conta Poupança é:    " + numeroContaPoupanca);
+
+    }
+
+    public int getNumeroAgencia() {
+        return numeroAgencia;
+    }
+
+    public void setNumeroContaCorrente{
         Random contacorrente = new Random();
+        this.numeroContaCorrente = contacorrente.nextInt(99999 + 1);
+
+    }
+
+    public int getNumeroContaCorrente() {
+        return numeroContaCorrente;
+    }
+
+    public void setNumeroContaPoupanca() {
         Random contapoupanca = new Random();
 
-        if(contacorrente != contapoupanca) {
-
-            this.numeroAgencia  = agencia.nextInt(9999 + 1) ;
-            this.numeroContaCorrente = contacorrente.nextInt(99999 + 1);
+  //      if(contacorrente != contapoupanca) {
             this.numeroContaPoupanca = contapoupanca.nextInt(999999 + 1);
-//
-
-            System.out.println("Seu número de Agência é: " +  numeroAgencia+
-                    "\nSua Conta Corrente é:    " + numeroContaCorrente +
-                    "\nSua Conta Poupança é:    " + numeroContaPoupanca);
-
-        }
+  //      }
     }
-//metodos construtores
+
+    //metodos construtores
    /* public Conta(int senha){
         this.senha = senha;
     }
