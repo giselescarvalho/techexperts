@@ -12,9 +12,9 @@ public class CriaConta {
         titular.getEndereco();
         titular.getTelefone();
 
-      //  Conta conta1 = new Conta();
-        conta1.setSenha(1234);
-        conta1.setSaldoconta(0);
+//      //  Conta conta1 = new Conta();
+//        conta1.setSenha(1234);
+//        conta1.setSaldoconta(0);
 
 
         conta1.criaAgCc();
