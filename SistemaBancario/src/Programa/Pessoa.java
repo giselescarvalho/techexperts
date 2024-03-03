@@ -3,19 +3,19 @@ package Programa;
 
 public class Pessoa {
 
-    private static int idCliente = 1;
+    //private static int idCliente = 1;
     private String nome;
     private String cpf;
     private String endereco;
-    private int telefone;
+    private String telefone;
 
 
-    public Pessoa(String nome, String cpf, String endereco, int telefone) {
+    public Pessoa(String nome, String cpf, String endereco, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.telefone = telefone;
-        idCliente += 1;
+        //idCliente += 1;
     }
 
     public String getNome() {
@@ -42,18 +42,13 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public String toString(){
-        return "\nNome: " + this.getNome() +
-                "\nCPF: " + this.getCpf() +
-                "\nEndereço: " + this.getEndereco() +
-                "\nTelefone: " + this.getTelefone();
-    }
+
 }
